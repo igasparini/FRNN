@@ -17,7 +17,7 @@ def get_extensions():
     extension = CUDAExtension
     sources = [main_source] + sources
     sources += sources_cuda
-    extra_compile_args = {"cxx": ["-std=c++14"]}
+    extra_compile_args = {"cxx": ["-std=c++17"]}
     if parse_version(torch.__version__) >= parse_version('2.0.0'):
         extra_compile_args['cxx'] = ['-std=c++17']
 
